@@ -438,6 +438,8 @@ GameObject:
   - component: {fileID: 838752441}
   - component: {fileID: 838752440}
   - component: {fileID: 838752439}
+  - component: {fileID: 838752445}
+  - component: {fileID: 838752444}
   - component: {fileID: 838752443}
   m_Layer: 5
   m_Name: Canvas
@@ -538,10 +540,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 838752438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34114e8f32c39e41bddf681d63b1190, type: 3}
+  m_Script: {fileID: 11500000, guid: 93aa4e94eb3f68b4d9a52ed575beaa4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  counterText: {fileID: 1673982657}
+  _counterLogic: {fileID: 838752444}
+  _counterText: {fileID: 1673982657}
+--- !u!114 &838752444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838752438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4368c21562eb04eab66d1155415ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _countInterval: 0.5
+--- !u!114 &838752445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838752438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3412f9a254f01294fae637f8724c1491, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _counterLogic: {fileID: 838752444}
 --- !u!1 &1673982655
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +583,7 @@ GameObject:
   - component: {fileID: 1673982658}
   - component: {fileID: 1673982657}
   m_Layer: 5
-  m_Name: TimerText
+  m_Name: CounterText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +598,7 @@ RectTransform:
   m_GameObject: {fileID: 1673982655}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.29985, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1708183561}
@@ -633,7 +662,7 @@ GameObject:
   - component: {fileID: 1708183563}
   - component: {fileID: 1708183562}
   m_Layer: 5
-  m_Name: TimerImage
+  m_Name: CounterImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -648,7 +677,7 @@ RectTransform:
   m_GameObject: {fileID: 1708183560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.9048, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1673982656}
