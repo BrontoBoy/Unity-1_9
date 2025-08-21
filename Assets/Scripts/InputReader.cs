@@ -1,16 +1,16 @@
 using UnityEngine;
 
-public class CounterInput : MonoBehaviour
+public class InputReader : MonoBehaviour
 {
     private const int LeftMouseButton = 0;
     
-    [SerializeField] private CounterLogic _counterLogic;
+    public event System.Action OnLeftMouseButtonPressed;
     
     private void Update()
     {
         if (Input.GetMouseButtonDown(LeftMouseButton))
         {
-            _counterLogic.ToggleCounting();
+            OnLeftMouseButtonPressed?.Invoke();
         }
     }
 }

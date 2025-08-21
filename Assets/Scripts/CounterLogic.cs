@@ -5,12 +5,11 @@ public class CounterLogic : MonoBehaviour
 {
     [SerializeField] private float _countInterval = 0.5f;
     
-    private int _counter = 0;
     private bool _isCounting = false;
     private Coroutine _countingCoroutine;
     private WaitForSeconds _waitForInterval; 
     
-    public int Counter => _counter;
+    public int Counter { get; private set; } = 0;
     
     public event System.Action<int> OnCounterChanged;
     
@@ -58,8 +57,8 @@ public class CounterLogic : MonoBehaviour
         while (_isCounting)
         {
             yield return _waitForInterval;
-            _counter++;
-            OnCounterChanged?.Invoke(_counter);
+            Counter++;
+            OnCounterChanged?.Invoke(Counter);
         }
     }
     
